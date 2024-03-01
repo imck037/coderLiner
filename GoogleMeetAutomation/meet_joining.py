@@ -16,9 +16,11 @@ opt.add_experimental_option("prefs", {
 
 driver = webdriver.Chrome(options=opt)
 
-mail_address = os.environ['EMAIL_USER']
-password = os.environ['EMAIL_PASS']
+# define your email and password
+mail_address = os.environ['EMAIL_USER']      # set your email in the environment_variable
+password = os.environ['EMAIL_PASS']          # for security purpose
 g_meet_url = "https://meet.google.com/kbi-nixt-ryd"
+
 driver.get(g_meet_url)
 
 driver.find_element(By.CLASS_NAME, "rrdnCc").click()
